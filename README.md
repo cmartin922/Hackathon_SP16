@@ -1,8 +1,8 @@
 # Hackathon_SP16
-Chris Martin, Sara Gong, Andi Chen
+_*Chris Martin, Sara Gong, Andi Chen*_
 
 ##Materials
-- Arduino Uno
+- Arduino Uno or MKR1000 or Zero
 - A breadboard
 - A bunck of wires
 - 2 (3?) servo motors
