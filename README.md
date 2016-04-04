@@ -1,15 +1,15 @@
 # Hackathon_SP16
 Chris Martin, Sara Gong, Andi Chen
 
-#Materials:
+##Materials
 - Arduino Uno
 - A breadboard
 - A bunck of wires
 - 2 (3?) servo motors
 - A bunch of cardboard
 
-#Basic Functionality:
-Put stuff in:
+##Basic Functionality
+###Put stuff in:
 - User enters cubby number
 - Cubby opens
 - User puts food in cubby
@@ -17,15 +17,15 @@ Put stuff in:
 - User enters code
 - Machine rotates so an empty cubby is in the front
 
-Take stuff out:
+###Take stuff out:
 - User enters cubby number
 - Machine rotates so cubby is in the front
 - User enters code
 - Cubby opens
 - Machine clears code
 - User takes out food
-- User closes cubby 
+- User closes cubby
 
-#Ideas
+##Ideas
 - Can monitor if there are any empty cubbies online
 - Has freezers
