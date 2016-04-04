@@ -29,3 +29,5 @@ _*Chris Martin, Sara Gong, Andi Chen*_
 ##Ideas
 - Can monitor if there are any empty cubbies online
 - Has freezers
+- Website option allows users to reserve a cubby
+- Also allows one to track how long stuff has been in there and releases the code after a while
