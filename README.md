@@ -1,5 +1,5 @@
 # Hackathon_SP16
-***Chris Martin, Sara Gong, Andi Chen***
+***Chris Martin, Sara Gong, Andi Chen, William Lamb***
 
 ##Materials
 - Arduino Uno or MKR1000 or Zero
@@ -8,6 +8,7 @@
 - 2 (3?) servo motors
 - A bunch of cardboard
 - Might want some kind of internal frame to support lock movement (errector set?)
+- Electromagnets
 
 ##Basic Functionality
 ###Put stuff in:
