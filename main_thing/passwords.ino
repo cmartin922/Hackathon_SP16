@@ -71,14 +71,22 @@ void savePassword() {
   enterPassword(pass);
   Serial.println(F("Password saved"));
   Serial.print(F("Your cubby is: "));
+  
   Serial.println((currentCubby/4)+1, DEC);
 
   EEPROM.write((currentCubby/4)+33, 1);
+
+  if(currentCubby < 5) {
+      openDoor2();
+    }
+    else {
+      openDoor1();
+    }
   
   for(int i = 0; i < 4; i++) {
    EEPROM.write(currentCubby+i, pass[i]);
   }
 
-  delay(3000);
+  delay(7000);
   reset();
 }
