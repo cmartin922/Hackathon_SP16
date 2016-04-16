@@ -2,13 +2,11 @@
 ***Chris Martin, Sara Gong, Andi Chen, William Lamb***
 
 ##Materials
-- Arduino Uno or MKR1000 or Zero
-- A breadboard
-- A bunck of wires
-- 2 (3?) servo motors
+- Arduino Uno
+- Breadboards
+- A bunch of wires
+- 3 servo motors
 - A bunch of cardboard
-- Might want some kind of internal frame to support lock movement (errector set?)
-- Electromagnets
 
 ##Basic Functionality
 ###Put stuff in:
