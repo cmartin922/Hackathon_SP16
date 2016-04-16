@@ -1,35 +1,24 @@
 // constants won't change. They're used here to
 // set pin numbers:
-const int buttonPin0 = 8;     // the number of the pushbutton pin
-const int buttonPin1 = 9;     // the number of the pushbutton pin
-const int buttonPin2 = 10;     // the number of the pushbutton pin
-const int buttonPin3 = 11;     // the number of the pushbutton pin
-const int ledPin0 =  0;      // the number of the LED pin
-const int ledPin1 =  1;      // the number of the LED pin
-const int ledPin2 =  2;      // the number of the LED pin
-const int ledPin3 =  3;      // the number of the LED pin
+const int buttonPin0 = 8;     // the number of the connection pin
+const int buttonPin1 = 9;     // the number of the connection pin
+const int buttonPin2 = 10;     // the number of the connection pin
+const int buttonPin3 = 11;     // the number of the connection pin
+const int motorPin = 6;      // the number of the motor pin
+int velocity = 200;          // the speed of the motor (0-255)
 
 // variables will change:
-int buttonState0 = 0;         // variable for reading the pushbutton status
-int buttonState1 = 0;         // variable for reading the pushbutton status
-int buttonState2 = 0;         // variable for reading the pushbutton status
-int buttonState3 = 0;         // variable for reading the pushbutton status
+int buttonState0 = 0;         // variable for reading the connection status
+int buttonState1 = 0;         // variable for reading the connection status
+int buttonState2 = 0;         // variable for reading the connection status
+int buttonState3 = 0;         // variable for reading the connection status
 
 void setup() {
-  // initialize the LED pin as an output:
-  pinMode(ledPin0, OUTPUT);
-  pinMode(ledPin1, OUTPUT);
-  pinMode(ledPin2, OUTPUT);
-  pinMode(ledPin3, OUTPUT);
   // initialize the pushbutton pin as an input:
   pinMode(buttonPin0, INPUT_PULLUP);
   pinMode(buttonPin1, INPUT_PULLUP);
   pinMode(buttonPin2, INPUT_PULLUP);
   pinMode(buttonPin3, INPUT_PULLUP);
-  digitalWrite(ledPin0, LOW);
-  digitalWrite(ledPin1, LOW);
-  digitalWrite(ledPin2, LOW);
-  digitalWrite(ledPin3, LOW);
 }
 
 void loop() {
@@ -38,46 +27,52 @@ void loop() {
   buttonState1 = digitalRead(buttonPin1);
   buttonState2 = digitalRead(buttonPin2);
   buttonState3 = digitalRead(buttonPin3);
-  
-  // check if the pushbutton is pressed.
-  // if it is, the buttonState is HIGH:
-  // first check
-  if (buttonState0 == LOW) {
-    // turn LED on:
-    digitalWrite(ledPin0, HIGH);
-  }
-  else {
-    // turn LED off:
-    digitalWrite(ledPin0, LOW);
-  }
+}
 
-  // second check
-    if (buttonState1 == LOW) {
-    // turn LED on:
-    digitalWrite(ledPin1, HIGH);
+void firstDoor() {
+  buttonState0 = digitalRead(buttonPin0);
+  while (buttonState0 != LOW) {
+    // turn motor on:
+    analogWrite(motorPin, velocity);
+    delay(10);
+    buttonState0 = digitalRead(buttonPin0);
   }
-  else {
-    // turn LED off:
-    digitalWrite(ledPin1, LOW);
-  }
+  // turn motor off:
+  analogWrite(motorPin, 0);
+}
 
-   // third check
-    if (buttonState2 == LOW) {
-    // turn LED on:
-    digitalWrite(ledPin2, HIGH);
+void secondDoor() {
+  buttonState1 = digitalRead(buttonPin1);
+  while (buttonState1 != LOW) {
+    // turn motor on:
+    analogWrite(motorPin, velocity);
+    delay(10);
+    buttonState1 = digitalRead(buttonPin1);
   }
-  else {
-    // turn LED off:
-    digitalWrite(ledPin2, LOW);
-  }
+  // turn motor off:
+  analogWrite(motorPin, 0);
+}
 
-  // fourth check
-    if (buttonState3 == LOW) {
-    // turn LED on:
-    digitalWrite(ledPin3, HIGH);
+void thirdDoor() {
+  buttonState2 = digitalRead(buttonPin2);
+  while (buttonState2 != LOW) {
+    // turn motor on:
+    analogWrite(motorPin, velocity);
+    delay(10);
+    buttonState2 = digitalRead(buttonPin2);
   }
-  else {
-    // turn LED off:
-    digitalWrite(ledPin3, LOW);
+  // turn motor off:
+  analogWrite(motorPin, 0);
+}
+
+void fourthDoor() {
+  buttonState3 = digitalRead(buttonPin3);
+  while (buttonState3 != LOW) {
+    // turn motor on:
+    analogWrite(motorPin, velocity);
+    delay(10);
+    buttonState3 = digitalRead(buttonPin3);
   }
+  // turn motor off:
+  analogWrite(motorPin, 0);
 }
