@@ -1,9 +1,9 @@
 // constants won't change. They're used here to
 // set pin numbers:
-const int buttonPin0 = 8;     // the number of the connection pin
-const int buttonPin1 = 9;     // the number of the connection pin
-const int buttonPin2 = 10;     // the number of the connection pin
-const int buttonPin3 = 11;     // the number of the connection pin
+const int buttonPin0 = 1;     // the number of the connection pin
+const int buttonPin1 = 2;     // the number of the connection pin
+const int buttonPin2 = 3;     // the number of the connection pin
+const int buttonPin3 = 4;     // the number of the connection pin
 const int motorPin = 6;      // the number of the motor pin
 int velocity = 200;          // the speed of the motor (0-255)
 
@@ -39,6 +39,7 @@ void firstDoor() {
   }
   // turn motor off:
   analogWrite(motorPin, 0);
+  delay(100);
 }
 
 void secondDoor() {
@@ -51,6 +52,7 @@ void secondDoor() {
   }
   // turn motor off:
   analogWrite(motorPin, 0);
+  delay(100);
 }
 
 void thirdDoor() {
@@ -63,6 +65,7 @@ void thirdDoor() {
   }
   // turn motor off:
   analogWrite(motorPin, 0);
+  delay(100);
 }
 
 void fourthDoor() {
@@ -75,4 +78,5 @@ void fourthDoor() {
   }
   // turn motor off:
   analogWrite(motorPin, 0);
+  delay(100);
 }
